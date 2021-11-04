@@ -8,18 +8,20 @@ git_repo_id=$2
 release_note=$3
 git_host=$4
 
-echo $git_user_id
 
 if [ "$git_host" = "" ]; then
     git_host="github.com"
     echo "[INFO] No command line input provided. Set \$git_host to $git_host"
 fi
 
+
 if [ "$git_user_id" = "" ]; then
     git_user_id="GIT_USER_ID"
     echo "[INFO] No command line input provided. Set \$git_user_id to $git_user_id"
 fi
 
+
+echo $git_user_id
 if [ "$git_repo_id" = "" ]; then
     git_repo_id="GIT_REPO_ID"
     echo "[INFO] No command line input provided. Set \$git_repo_id to $git_repo_id"
