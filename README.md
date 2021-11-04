@@ -1,4 +1,4 @@
-# OpenAPIClient-php
+# KROSS ONIX - PHP OpenAPIClient 
 
 Dokumentácia ku Web API programu ONIX.
 Pre testovanie s reálnymi dátami (dotazovanie servera) je potrebné zadať autorizačný token, ktorý Vám poskytla firma Kros a.s..
@@ -22,11 +22,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/arzzen/onix-kross-php-lib.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "arzzen/onix-kross-php-lib": "*@dev"
   }
 }
 ```
@@ -39,7 +39,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
+require_once('/path/to/onix-kross-php-lib/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -50,13 +50,10 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
 // Configure API key authorization: Authorization
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 
 $apiInstance = new OpenAPI\Client\Api\DocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
